@@ -72,10 +72,18 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const defaultLanguage =
+  (document.addEventListener("DOMContentLoaded"),
+  function () {
+    const element = document.querySelector("[data-bosnian]");
+    const language = element.getAttributr("data-bosnian");
+
+    element.innerText = language;
+  });
+
 function toggleLanguage() {
   const elements = document.querySelectorAll("[data-bosnian], [data-english]");
 
-  // Loop through each element and toggle the language
   elements.forEach((element) => {
     const bosnianText = element.getAttribute("data-bosnian");
     const englishText = element.getAttribute("data-english");
@@ -87,14 +95,7 @@ function toggleLanguage() {
       element.innerText = bosnianText;
     }
   });
-
-  // Toggle the language of the button and display only selected language
-
-  function toggleButtonLanguage() {
-    const button = document.querySelector(".toggle-slider-label");
-    const currentLanguage = button.innerText;
-    const otherLanguage = currentLanguage === "EN" ? "BOS" : "EN";
-
-    button.innerText = otherLanguage;
-  }
 }
+const toggleButton = document.getElementById("language-switcher-btn");
+
+toggleButton.addEventListener("click", toggleLanguage);
