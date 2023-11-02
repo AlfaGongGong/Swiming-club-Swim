@@ -150,52 +150,19 @@ i.fas.fa-bars:hover {
   background-repeat: no-repeat;
 }
 #home h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   font-family: "Playfair Display", serif;
-  font-size: 5rem;
-  margin-bottom: 1rem;
+  font-size: 10rem;
+  margin-bottom: 50rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
   color: #483285;
-  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
 }
 #home p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.6901960784);
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  border-radius: 1rem;
-  margin: 1rem;
   font-family: "Lato", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #483285;
   line-height: 1.5;
@@ -203,6 +170,7 @@ i.fas.fa-bars:hover {
   letter-spacing: 0.2rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  background-color: rgba(255, 255, 255, 0.6901960784);
 }
 
 #about {
@@ -476,11 +444,8 @@ i.fas.fa-bars:hover {
   margin-bottom: 2rem;
 }
 #gallery .gallery-image {
-  width: 40rem;
-  height: 40rem;
   border-radius: 1rem;
   border: 1px solid #ccc;
-  margin: 1rem;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
@@ -495,7 +460,6 @@ i.fas.fa-bars:hover {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  margin-bottom: 1rem;
 }
 
 .gallery-controls {
@@ -584,6 +548,50 @@ i.fas.fa-bars:hover {
           flex-direction: column;
   width: 100%;
   height: auto;
+}
+#class-cards .col-md-4,
+#class-cards .col-md-12 {
+  width: 100%;
+  height: auto;
+  margin: 3rem 0;
+}
+#class-cards h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+#class-cards h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+#class-cards p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #483285;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+#class-cards .price-tag {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #483285;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 #class-cards .class-card {
   position: relative;
@@ -762,4 +770,19 @@ i.fas.fa-bars:hover {
   letter-spacing: 0.2rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+#footer #alfagonggong {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+#footer #alfagonggong:hover {
+  color: #54b4b8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
