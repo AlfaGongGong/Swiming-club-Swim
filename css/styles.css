@@ -6,8 +6,6 @@
 }
 
 html {
-  width: 100%;
-  height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -20,8 +18,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -152,13 +148,18 @@ i.fas.fa-bars:hover {
 #home h1 {
   font-family: "Playfair Display", serif;
   font-size: 10rem;
-  margin-bottom: 50rem;
+  margin-bottom: 50%;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
   color: #483285;
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 5rem;
+  }
 }
 #home p {
   font-family: "Lato", sans-serif;
@@ -171,6 +172,17 @@ i.fas.fa-bars:hover {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   background-color: rgba(255, 255, 255, 0.6901960784);
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#home p:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
 
 #about {
@@ -259,7 +271,6 @@ i.fas.fa-bars:hover {
           flex-direction: column;
   background-color: rgba(255, 255, 255, 0.6901960784);
   text-align: center;
-  padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
   width: 30rem;
@@ -319,7 +330,7 @@ i.fas.fa-bars:hover {
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
-  width: 30rem;
+  width: 100%;
   height: auto;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -334,6 +345,7 @@ i.fas.fa-bars:hover {
 
 .card-text {
   font-family: "Lato", sans-serif;
+  width: 100%;
   font-size: 1.2rem;
   text-align: justify;
   color: #483285;
@@ -608,7 +620,7 @@ i.fas.fa-bars:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.6s ease;
@@ -650,6 +662,7 @@ i.fas.fa-bars:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(255, 255, 255, 0.6901960784);
 }
 #class-cards .class-card:hover .class-card-front {
   -webkit-transform: rotateY(180deg);
@@ -663,6 +676,8 @@ i.fas.fa-bars:hover {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 #class-cards .class-card h3 {
   font-size: 24px;
@@ -785,4 +800,85 @@ i.fas.fa-bars:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
+}
+
+.fa-phone:hover {
+  cursor: default;
+}
+
+@media (hover: none) {
+  h1,
+  p,
+  h2,
+  .profile-card,
+  .card-text,
+  .about-content,
+  .gallery-image,
+  .gallery-thumbnails img,
+  .class-card h3,
+  .class-card p,
+  #footer h3,
+  #footer p {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .profile-card:hover,
+  .bio-trigger:hover,
+  .about-content:hover,
+  .gallery-image:hover,
+  .gallery-thumbnails img:hover,
+  .class-card:hover .class-card-front,
+  .class-card:hover .class-card-back,
+  #footer li:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+p:hover, p:active,
+.card-container:hover,
+.card-container:active,
+.profile-card:hover,
+.profile-card:active,
+.bio-trigger:hover,
+.bio-trigger:active,
+.about-content:hover,
+.about-content:active,
+.gallery-image:hover,
+.gallery-image:active,
+.gallery-thumbnails img:hover,
+.gallery-thumbnails img:active,
+.class-card h3:hover,
+.class-card h3:active,
+.class-card p:hover,
+.class-card p:active,
+#footer li:hover,
+#footer li:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+@media (hover: none) {
+  p:hover, p:active,
+  .card-container:hover,
+  .card-container:active,
+  .profile-card:hover,
+  .profile-card:active,
+  .bio-trigger:hover,
+  .bio-trigger:active,
+  .about-content:hover,
+  .about-content:active,
+  .gallery-image:hover,
+  .gallery-image:active,
+  .gallery-thumbnails img:hover,
+  .gallery-thumbnails img:active,
+  .class-card h3:hover,
+  .class-card h3:active,
+  .class-card p:hover,
+  .class-card p:active,
+  #footer li:hover,
+  #footer li:active {
+    -webkit-transform: none;
+            transform: none;
+    cursor: pointer;
+  }
 }

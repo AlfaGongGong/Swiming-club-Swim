@@ -12,8 +12,6 @@ $nav-font: "Montserrat", sans-serif;
 }
 
 html {
-  width: 100%;
-  height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -26,8 +24,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: $content-font;
@@ -133,13 +129,17 @@ i.fas.fa-bars:hover {
   h1 {
     font-family: $heading-font;
     font-size: 10rem;
-    margin-bottom: 50rem;
+    margin-bottom: 50%;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
     color: $font-color;
     font-weight: 900;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+    @media (max-width: 768px) {
+      font-size: 5rem;
+    }
+
   }
 
   p {
@@ -153,7 +153,19 @@ i.fas.fa-bars:hover {
     text-align: center;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
     background-color: #ffffffb0;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+
   }
+
+
 
 }
 
@@ -219,7 +231,6 @@ i.fas.fa-bars:hover {
   flex-direction: column;
   background-color: #ffffffb0;
   text-align: center;
-  padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
   width: 30rem;
@@ -258,7 +269,7 @@ i.fas.fa-bars:hover {
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
-  width: 30rem;
+  width: 100%;
   height: auto;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
@@ -270,6 +281,7 @@ i.fas.fa-bars:hover {
 
 .card-text {
   font-family: $content-font;
+  width: 100%;
   font-size: 1.2rem;
   text-align: justify;
   color: $font-color;
@@ -494,7 +506,7 @@ i.fas.fa-bars:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     backface-visibility: hidden;
     transition: transform 0.6s ease;
     border-radius: 1rem;
@@ -515,6 +527,7 @@ i.fas.fa-bars:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffffffb0;
   }
 
   .class-card:hover .class-card-front {
@@ -529,6 +542,7 @@ i.fas.fa-bars:hover {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
+    filter: blur(2px);
   }
 
   .class-card h3 {
@@ -631,3 +645,71 @@ i.fas.fa-bars:hover {
 
   }
 
+  .fa-phone:hover {
+    cursor: default;
+  }
+
+// Add touch input rules for all existing rules
+
+@media (hover: none) {
+    h1,
+    p,
+    h2,
+    .profile-card,
+    .card-text,
+    .about-content,
+    .gallery-image,
+    .gallery-thumbnails img,
+    .class-card h3,
+    .class-card p,
+    #footer h3,
+    #footer p {
+        transition: none;
+    }
+
+    .profile-card:hover,
+    .bio-trigger:hover,
+    .about-content:hover,
+    .gallery-image:hover,
+    .gallery-thumbnails img:hover,
+    .class-card:hover .class-card-front,
+    .class-card:hover .class-card-back,
+    #footer li:hover {
+        transform: none;
+    }
+}
+// Define a mixin for hover and active styles
+@mixin hover-active {
+    &:hover,
+    &:active {
+        // Add your hover and active styles here
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+// Define a mixin for touch screen styles
+@mixin touch-screen {
+    @media (hover: none) {
+        &:hover,
+        &:active {
+            transform: none;
+            cursor: pointer;
+        }
+    }
+}
+
+// Apply the hover-active mixin to all elements that need it
+p,
+.card-container,
+.profile-card,
+.bio-trigger,
+.about-content,
+.gallery-image,
+.gallery-thumbnails img,
+.class-card h3,
+.class-card p,
+#footer li {
+    @include hover-active;
+    @include touch-screen;
+}
