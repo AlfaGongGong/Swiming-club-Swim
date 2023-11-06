@@ -148,7 +148,7 @@ i.fas.fa-bars:hover {
 #home h1 {
   font-family: "Playfair Display", serif;
   font-size: 10rem;
-  margin-bottom: 50%;
+  margin-bottom: 30%;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
@@ -280,18 +280,17 @@ i.fas.fa-bars:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.profile-card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  cursor: pointer;
-}
 
 .profile-image {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-body {
@@ -351,7 +350,6 @@ i.fas.fa-bars:hover {
   color: #483285;
   line-height: 1.5;
   margin: 1rem 0.5rem;
-  text-overflow: ellipsis;
   letter-spacing: 0.2rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
@@ -806,87 +804,4 @@ i.fas.fa-bars:hover {
 
 .fa-phone:hover {
   cursor: default;
-}
-
-@media (hover: none) {
-  h1,
-  p,
-  h2,
-  .profile-card,
-  .card-text,
-  .about-content,
-  .gallery-image,
-  .gallery-thumbnails img,
-  .class-card h3,
-  .class-card p,
-  #footer h3,
-  #footer p {
-    -webkit-transition: none;
-    transition: none;
-  }
-  .profile-card:hover,
-  .bio-trigger:hover,
-  .about-content:hover,
-  .gallery-image:hover,
-  .gallery-thumbnails img:hover,
-  .class-card:hover .class-card-front,
-  .class-card:hover .class-card-back,
-  #footer li:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-p:hover, p:active,
-.card-container:hover,
-.card-container:active,
-.profile-card:hover,
-.profile-card:active,
-.bio-trigger:hover,
-.bio-trigger:active,
-.about-content:hover,
-.about-content:active,
-.gallery-image:hover,
-.gallery-image:active,
-.gallery-thumbnails img:hover,
-.gallery-thumbnails img:active,
-.class-card h3:hover,
-.class-card h3:active,
-.class-card p:hover,
-.class-card p:active,
-#footer li:hover,
-#footer li:active {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  cursor: pointer;
-}
-@media (hover: none) {
-  p:hover, p:active,
-  .card-container:hover,
-  .card-container:active,
-  .profile-card:hover,
-  .profile-card:active,
-  .bio-trigger:hover,
-  .bio-trigger:active,
-  .about-content:hover,
-  .about-content:active,
-  .gallery-image:hover,
-  .gallery-image:active,
-  .gallery-thumbnails img:hover,
-  .gallery-thumbnails img:active,
-  .class-card h3:hover,
-  .class-card h3:active,
-  .class-card p:hover,
-  .class-card p:active,
-  #footer li:hover,
-  #footer li:active {
-    -webkit-transform: none;
-            transform: none;
-    cursor: pointer;
-  }
-}
-
-#googleMap {
-  width: 100%;
-  height: 25rem;
-  margin-bottom: 2rem;
 }

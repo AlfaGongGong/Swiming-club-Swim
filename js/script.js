@@ -10,18 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const cards = document.querySelectorAll(".profile-card");
-cards.forEach(function (card) {
-  const bioTrigger = card.querySelector(".bio-trigger");
-  card.addEventListener("mouseenter", function () {
-    bioTrigger.classList.remove("d-none");
-    bioTrigger.classList.add("d-block");
-  });
-  card.addEventListener("mouseleave", function () {
-    bioTrigger.classList.remove("d-block");
-    bioTrigger.classList.add("d-none");
-  });
-});
+
 
 const thumbnails = document.querySelectorAll(".gallery-thumbnails img");
 const image = document.querySelector(".gallery-image img");
