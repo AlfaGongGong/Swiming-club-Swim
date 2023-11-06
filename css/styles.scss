@@ -506,7 +506,7 @@ i.fas.fa-bars:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     backface-visibility: hidden;
     transition: transform 0.6s ease;
     border-radius: 1rem;
@@ -541,6 +541,7 @@ i.fas.fa-bars:hover {
   .class-card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
     filter: blur(2px);
   }
@@ -649,7 +650,6 @@ i.fas.fa-bars:hover {
     cursor: default;
   }
 
-// Add touch input rules for all existing rules
 
 @media (hover: none) {
     h1,
@@ -678,7 +678,6 @@ i.fas.fa-bars:hover {
         transform: none;
     }
 }
-// Define a mixin for hover and active styles
 @mixin hover-active {
     &:hover,
     &:active {
@@ -688,7 +687,6 @@ i.fas.fa-bars:hover {
     }
 }
 
-// Define a mixin for touch screen styles
 @mixin touch-screen {
     @media (hover: none) {
         &:hover,
@@ -699,7 +697,6 @@ i.fas.fa-bars:hover {
     }
 }
 
-// Apply the hover-active mixin to all elements that need it
 p,
 .card-container,
 .profile-card,
@@ -712,4 +709,10 @@ p,
 #footer li {
     @include hover-active;
     @include touch-screen;
+}
+
+#googleMap {
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 2rem;
 }
