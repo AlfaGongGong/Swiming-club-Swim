@@ -805,3 +805,9 @@ i.fas.fa-bars:hover {
 .fa-phone:hover {
   cursor: default;
 }
+
+#googleMap {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+}
