@@ -480,13 +480,7 @@ i.fas.fa-bars:hover {
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   }
 
-  .price-tag {
-    font-weight: 900;
-    font-size: 2.5rem;
-    color: $font-color;
-    margin-bottom: 1rem;
-    text-align: center;
-    }
+
 
 
   .class-card {
@@ -511,7 +505,6 @@ i.fas.fa-bars:hover {
   }
 
   .class-card-front {
-    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -519,13 +512,11 @@ i.fas.fa-bars:hover {
   }
 
   .class-card-back {
-    background-color: $main-color;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffb0;
   }
 
   .class-card:hover .class-card-front {
@@ -550,6 +541,7 @@ i.fas.fa-bars:hover {
     color: $font-color;
     font-family: $heading-font;
     font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   }
 
   .class-card p {
@@ -557,6 +549,17 @@ i.fas.fa-bars:hover {
     text-align: center;
     color: $font-color;
     font-family: $content-font;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  }
+
+  .class-card span {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: $font-color;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+
   }
 }
 #footer {

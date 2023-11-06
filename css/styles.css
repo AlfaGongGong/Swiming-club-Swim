@@ -596,13 +596,6 @@ i.fas.fa-bars:hover {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
 }
-#class-cards .price-tag {
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: #483285;
-  margin-bottom: 1rem;
-  text-align: center;
-}
 #class-cards .class-card {
   position: relative;
   width: 100%;
@@ -628,7 +621,6 @@ i.fas.fa-bars:hover {
   border-radius: 1rem;
 }
 #class-cards .class-card-front {
-  background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,7 +636,6 @@ i.fas.fa-bars:hover {
           align-items: center;
 }
 #class-cards .class-card-back {
-  background-color: #54b4b8;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   display: -webkit-box;
@@ -660,7 +651,6 @@ i.fas.fa-bars:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.6901960784);
 }
 #class-cards .class-card:hover .class-card-front {
   -webkit-transform: rotateY(180deg);
@@ -685,12 +675,22 @@ i.fas.fa-bars:hover {
   color: #483285;
   font-family: "Playfair Display", serif;
   font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
 }
 #class-cards .class-card p {
   font-size: 16px;
   text-align: center;
   color: #483285;
   font-family: "Lato", sans-serif;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+#class-cards .class-card span {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #483285;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
 }
 
 #footer {
