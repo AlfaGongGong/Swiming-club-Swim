@@ -31,94 +31,176 @@ body {
   line-height: 1.5;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
 
-section {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-
-}
-.navbar {
-  border-bottom: 1px solid #ccc;
-  padding: 1rem;
-  display: flex;
+#navbarNav {
+  position: fixed;
+  display: none;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-color: #ffffffb0;
-  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+  padding: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
-#logo {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-}
-
-i.fas.fa-bars {
-  color: $font-color;
-  border: none;
-  background-color: transparent;
-}
-
-i.fas.fa-bars:hover {
-  color: $main-color;
-  cursor: pointer;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: $font-color;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: $main-color;
-  scale: 1.1;
-}
-
-.language-switcher {
+#navbarNav.expanded {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  button {
-    background-color: $main-color;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    padding: 1rem;
-    font-family: $content-font;
-    font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: fit-content;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
     text-align: center;
-    color: $font-color;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
     transition: all 0.3s ease-in-out;
+
+
+  }
+
+
+
+
+  .navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin: 0.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffb0;
+    color: $font-color;
+    font-size: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
     }
+
+
+  }
+
+  .fas {
+    font-weight: bold;
+    margin-right: 1rem;
   }
 }
 
-#home {
+#language-switcher-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+  background-color: $main-color;
+  border: 1px solid #ccc;
+  font-family: $content-font;
+  font-size: 1.5rem;
+  text-align: center;
   color: $font-color;
-  height: 100vh;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+#toggle-navbar-btn {
+  background-color: $main-color;
+  border: 1px solid #ccc;
+  font-family: $content-font;
+  font-size: 1.5rem;
+  text-align: center;
+  color: $font-color;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+
+
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
+  height: 100vh;
+
+  color: $font-color;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
   background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
@@ -129,13 +211,13 @@ i.fas.fa-bars:hover {
   h1 {
     font-family: $heading-font;
     font-size: 10rem;
-    margin-bottom: 30%;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
     color: $font-color;
     font-weight: 900;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+
     @media (max-width: 768px) {
       font-size: 5rem;
     }
@@ -147,8 +229,6 @@ i.fas.fa-bars:hover {
     font-size: 1.5rem;
     text-align: center;
     color: $font-color;
-    line-height: 1.5;
-    margin-bottom: 1rem;
     letter-spacing: 0.2rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
@@ -157,16 +237,12 @@ i.fas.fa-bars:hover {
     border-radius: 1rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
     }
-
-
   }
-
-
-
 }
 
 #about {
@@ -178,6 +254,7 @@ i.fas.fa-bars:hover {
   height: auto;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
+
   h1 {
     font-family: $heading-font;
     font-size: 3rem;
@@ -224,6 +301,7 @@ i.fas.fa-bars:hover {
   height: auto;
   margin-bottom: 2rem;
 }
+
 .profile-card {
   display: flex;
   justify-content: center;
@@ -246,8 +324,8 @@ i.fas.fa-bars:hover {
   border-radius: 50%;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    object-fit: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .card-body {
@@ -272,6 +350,7 @@ i.fas.fa-bars:hover {
   height: auto;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -305,6 +384,7 @@ i.fas.fa-bars:hover {
   height: auto;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -355,6 +435,7 @@ i.fas.fa-bars:hover {
     text-align: center;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   }
+
   .gallery-container {
     display: flex;
     justify-content: center;
@@ -364,28 +445,40 @@ i.fas.fa-bars:hover {
     height: auto;
     margin-bottom: 2rem;
   }
+
   .gallery-image {
     border-radius: 1rem;
+    width: 30rem;
+    height: 30rem;
+
     border: 1px solid #ccc;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+    margin: 1rem;
+
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
     }
+
     img {
       width: 100%;
       height: 100%;
       border-radius: 1rem;
+      object-fit: cover;
+
     }
   }
 }
+
 .gallery-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
   margin-bottom: 2rem;
+
   button {
     background-color: $main-color;
     border: 1px solid #ccc;
@@ -401,6 +494,7 @@ i.fas.fa-bars:hover {
     text-align: center;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
     transition: all 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
@@ -416,6 +510,7 @@ i.fas.fa-bars:hover {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
+
   img {
     width: 10rem;
     height: 10rem;
@@ -424,6 +519,7 @@ i.fas.fa-bars:hover {
     margin: 1rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
@@ -468,6 +564,7 @@ i.fas.fa-bars:hover {
     color: $font-color;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   }
+
   p {
     font-family: $content-font;
     font-size: 1.5rem;
@@ -554,6 +651,7 @@ i.fas.fa-bars:hover {
 
   .class-card span {
     font-weight: 900;
+    text-transform: capitalize;
     font-size: 2.5rem;
     color: $font-color;
     margin-bottom: 1rem;
@@ -562,6 +660,7 @@ i.fas.fa-bars:hover {
 
   }
 }
+
 #footer {
   display: flex;
   flex-direction: column;
@@ -572,6 +671,7 @@ i.fas.fa-bars:hover {
   background-color: #ffffffb0;
   border-top: 1px solid #ccc;
   padding: 1rem;
+
   ul {
     display: flex;
     justify-content: center;
@@ -596,6 +696,7 @@ i.fas.fa-bars:hover {
     height: auto;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
@@ -611,6 +712,7 @@ i.fas.fa-bars:hover {
     color: $font-color;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   }
+
   a {
     text-decoration: none;
     color: $font-color;
@@ -637,19 +739,20 @@ i.fas.fa-bars:hover {
     text-align: center;
     color: $font-color;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+
     &:hover {
       color: $main-color;
       transform: scale(1.1);
       cursor: pointer;
     }
+  }
+
+
 }
 
-
-  }
-
-  .fa-phone:hover {
-    cursor: default;
-  }
+.fa-phone:hover {
+  cursor: default;
+}
 
 
 #googleMap {

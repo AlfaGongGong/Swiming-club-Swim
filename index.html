@@ -22,74 +22,73 @@
 
 <body>
     <!-- Navbar Section -->
-
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="#">
+    <button id="toggle-navbar-btn" class="navbar-toggler" type="button" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="navbarNav" class="navbar navbar-expand-md side-navbar fixed-left collapse"> <a class="navbar-brand"
+            href="#">
             <img src="./img/logo.jpg" alt="Club Logo" id="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home"><i class="fas fa-home" data-bosnian="POČETNA"
-                            data-english="HOME">HOME</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about"><i class="fas fa-address-card" data-bosnian="O NAMA"
-                            data-english="ABOUT US">ABOUT US</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery"><i class="fas fa-image" data-bosnian="GALERIJA"
-                            data-english="GALLERY">GALLERY</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#class-cards"><i class="fas fa-graduation-cap" data-bosnian="GRUPE"
-                            data-english="CLASSES">CLASSES</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#footer"><i class="fas fa-phone" data-bosnian="KONTAKT"
-                            data-english="CONTACT US">CONTACT US</i></a>
-                </li>
-            </ul>
-            <div class="language-switcher">
-                <button id="language-switcher-btn" onclick="toggleLanguage()" data-bosnian="Change to English"
-                    data-english="Promijeni u Bosanski">Promijeni u Bosanski</button>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#home" data-bosnian="POČETNA" data-english="HOME"><i
+                        class="fas fa-home"></i>POČETNA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about" data-bosnian="O NAMA" data-english="ABOUT US"><i
+                        class="fas fa-address-card"></i>O NAMA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#gallery" data-bosnian="GALERIJA" data-english="GALLERY"><i
+                        class="fas fa-image"> </i>GALERIJA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#class-cards" data-bosnian="GRUPE" data-english="CLASSES"><i
+                        class="fas fa-graduation-cap"> </i>GRUPE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#footer" data-bosnian="KONTAKT" data-english="CONTACT US"><i
+                        class="fas fa-phone"> </i>KONTAKT</a>
+            </li>
+        </ul>
+        <div class="language-switcher">
+            <button id="language-switcher-btn" onclick="toggleLanguage()" data-bosnian="Eng"
+                data-english="Bos">Eng</button>
 
-            </div>
         </div>
     </nav>
+    <!-- End of Navbar Section -->
 
     <!-- Home Section Hero -->
     <section id="home" class="hero">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 data-bosnian="BUDI PLIVAČ!" data-english="BE THE SWIMER!">BE THE SWIMER!</h1>
+                    <h1 data-bosnian="BUDI PLIVAČ!" data-english="BE THE SWIMER!"> BUDI PLIVAČ!</h1>
                     <p data-bosnian='Dobrodošli u “Swim” , klub u kojem se plivanje voli i na treninge dolazi sa
                     osmijehom! Školu plivanja i takmičarske treninge vode licencirani treneri sa
                     uspješnim plivačkim karijerama. I prije prvog rođendana kluba, “Swim” već ima
-                    plivače koji se uspješno takmiče. Prve medalje su osvojene. Pridružite nam se!'
-                        data-english='Welcome to "Swim" , a club where swimming is loved and where you come to training with a smile! The swimming school and competitive training are led by licensed coaches with
+                    plivače koji se uspješno takmiče. Prve medalje su osvojene. Pridružite nam se!' data-english='Welcome to "Swim" , a club where swimming is loved and where you come to training with a smile! The swimming school and competitive training are led by licensed coaches with
                         successful swimming careers. Even before the first birthday of the club, "Swim" already has
                         swimmers who compete successfully. The first medals were won. Join us!'>
-                        Welcome to "Swim", a club where swimming is loved and where you come to training with a smile! The swimming school and competitive training are led by licensed coaches with
-                    successful swimming careers. Even before the first birthday of the club, "Swim" already has
-                    swimmers who compete successfully. The first medals were won. Join us!</p>
+                        Dobrodošli u “Swim” , klub u kojem se plivanje voli i na treninge dolazi sa osmijehom! Školu
+                        plivanja i takmičarske treninge vode licencirani treneri sa uspješnim plivačkim karijerama. I
+                        prije prvog rođendana kluba, “Swim” već ima plivače koji se uspješno takmiče. Prve medalje su
+                        osvojene. Pridružite nam se!</p>
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
 
     <!-- About Us Section -->
     <section id="about">
-        <h1 data-bosnian="O NAMA" data-english="ABOUT US">ABOUT US</h1>
+        <h1 data-bosnian="O NAMA" data-english="ABOUT US"> O NAMA</h1>
         <h2 data-bosnian="Upoznajte naše certificirane instruktore plivanja"
-            data-english="Meet our certified swimming instructors">Meet our certified swimming instructors</h2>
+            data-english="Meet our certified swimming instructors"> INSTRUKTORI PLIVANJA</h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 card-container">
@@ -98,10 +97,8 @@
                         <div class="card-body">
                             <h3 class="card-title" data-bosnian="Mateo" data-english="Mateo">Mateo</h3>
                             <span class="bio-trigger" data-bosnian="Kliknite za biografiju"
-                                data-english="Click for bio"> Click
-                                for bio</span>
-                            <p class="card-text"
-                                data-bosnian='Mateo Todosijević je licencirani FINA trener. Bivši je državni prvak u disciplini
+                                data-english="Click for bio"> KLIKNITE ZA BIOGRAFIJU</span>
+                            <p class="card-text" data-bosnian='Mateo Todosijević je licencirani FINA trener. Bivši je državni prvak u disciplini
                                 delfin.
                                 Rođen je u Sarajevu 1999 .godine. Završio je Petu gimnaziju, sportski smjer.
                                 Treću godinu pohađa u srednjoj školi ” Dunellen High school” u Sjedinjenim
@@ -116,10 +113,19 @@
                                 data-english='Mateo Todosijević is a licensed FINA coach. He is a former national champion in the butterfly discipline. Born in Sarajevo in 1999, he completed his education at Fifth Gymnasium with a focus on sports. Currently in his third year at Dunellen High School in the United States, he is actively involved in swimming and has achieved significant results. He earned his college degree in 2022, obtaining the title of Kinesiologist.
 
                                 Throughout nearly a decade of active swimming, he held the title of Bosnia and Herzegovina champion in the butterfly discipline for several consecutive years. After concluding his swimming career, he decided to pass on his knowledge and swimming experience to children and young swimmers, whether they are beginners looking to learn to swim or aspiring competitors. In 2023, he became a licensed FINA (International Swimming Federation) swimming coach and founded the "Swim" Swimming Club in the same year.'>
-                                Mateo Todosijević is a licensed FINA coach. He is a former national champion in the butterfly discipline. Born in Sarajevo in 1999, he completed his education at Petu Gymnasium with a focus on sports. Currently in his third year at Dunellen High School in the United States, he is actively involved in swimming and has achieved significant results. He earned his college degree in 2022, obtaining the title of Kinesiologist.
-
-                                Throughout nearly a decade of active swimming, he held the title of Bosnia and Herzegovina champion in the butterfly discipline for several consecutive years. After concluding his swimming career, he decided to pass on his knowledge and swimming experience to children and young swimmers, whether they are beginners looking to learn to swim or aspiring competitors. In 2023, he became a licensed FINA (International Swimming Federation) swimming coach and founded the "Swim" Swimming Club in the same year.
-                                </p>
+                                Mateo Todosijević je licencirani FINA trener. Bivši je državni prvak u disciplini
+                                delfin.
+                                Rođen je u Sarajevu 1999 .godine. Završio je Petu gimnaziju, sportski smjer.
+                                Treću godinu pohađa u srednjoj školi ” Dunellen High school” u Sjedinjenim
+                                Američkim Državama, trenira plivanje i postiže značajne rezultate. Fakultetsku
+                                diplomu stiče 2022.godine i dobija zvanje Kineziologa.
+                                Tokom skoro decenije aktivnog plivanja, nekoliko godina za redom bio je prvak
+                                Bosne i Hercegovine u disciplini delfin. Po okončanju plivačke karijere znanje i
+                                plivačko iskustvo odlučio je da prenese na djecu i mlade plivače, bilo da je riječ o
+                                mališanima koji žele da nauče da plivaju ili žele da se plivanjem bave aktivno i
+                                postanu takmičari. 2023. godine postao je licencirani FINA (Svjetska plivačka
+                                organizacija) trener plivanja. Iste godine osniva Plivački klub “Swim”.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -130,10 +136,8 @@
                         <div class="card-body">
                             <h3 class="card-title">Mak</h3>
                             <span class="bio-trigger" data-bosnian="Kliknite za biografiju"
-                                data-english="Click for bio"> Click
-                                for bio</span>
-                            <p class="card-text"
-                                data-bosnian='Mak Oručević je bivši uspješan plivač, danas trener u čijem fokusu je razvoj
+                                data-english="Click for bio"> KLIKNITE ZA BIOGRAFIJU</span>
+                            <p class="card-text" data-bosnian='Mak Oručević je bivši uspješan plivač, danas trener u čijem fokusu je razvoj
                                 plivačkih vještina kod najmlađih članova našeg kluba.
 
                                 Kako pomoći mališanima da uživaju u vodi? Kako ih naučiti da plivaju? Uz igru i
@@ -144,22 +148,32 @@
                                 data-english="Mak Oručević is a former successful swimmer, currently a coach focused on the development of swimming skills among the youngest members of our club.
 
                                 How to help little ones enjoy the water? How to teach them to swim? Through play and innovative training, children learn the basics of swimming. In addition to his successful swimming career, Mak Oručević has also achieved significant success in basketball and taekwondo. He is a licensed FIBA basketball referee, a licensed drone pilot, and a black belt master in taekwondo.">
-                                Mak Oručević is a former successful swimmer, currently a coach focused on the development of swimming skills among the youngest members of our club.
+                                Mak Oručević je bivši uspješan plivač, danas trener u čijem fokusu je razvoj
+                                plivačkih vještina kod najmlađih članova našeg kluba.
 
-How to help little ones enjoy the water? How to teach them to swim? Through play and innovative training, children learn the basics of swimming. In addition to his successful swimming career, Mak Oručević has also achieved significant success in basketball and taekwondo. He is a licensed FIBA basketball referee, a licensed drone pilot, and a black belt master in taekwondo.</p>
+                                Kako pomoći mališanima da uživaju u vodi? Kako ih naučiti da plivaju? Uz igru i
+                                inovativne treninge mališani uče osnove plivanja. Mak Oručević je , osim uspješne
+                                plivačke karijere, ostvario i značajne uspjehe u košarci i taekwondo-u. Licencirani
+                                je FIBA košarkaški sudija, licencirani pilot drona i majstor crnog pojasa u
+                                Taekwondo-u.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="about-content"
-                data-bosnian='Plivanje pozitivno utiče na psihofizički i socijalni razvoj djeteta. Naš cilj je da
+            <div class="about-content" data-bosnian='Plivanje pozitivno utiče na psihofizički i socijalni razvoj djeteta. Naš cilj je da
                 metodičkim vježbama u vodi doprinesemo pravilnom rastu i razvoju djeteta. Naši
                 programi prilagođeni su uzrastu i mogućnostima djeteta, bilo da je riječ o
                 početnicima i savladavanju osnovnih elemenata plivanja ili o takmičarskom
                 plivanju. Na našim treninzima njegujemo fair play i drugarstvo.
                 Zaplivajte s nama još danas!'
                 data-english='Swimming positively impacts the psychophysical and social development of a child. Our goal is to contribute to the proper growth and development of children through methodical water exercises. Our programs are tailored to the age and abilities of the child, whether they are beginners learning the basic elements of swimming or engaging in competitive swimming. In our training sessions, we foster fair play and camaraderie. Dive in with us today!'>
-                Swimming positively impacts the psychophysical and social development of a child. Our goal is to contribute to the proper growth and development of children through methodical water exercises. Our programs are tailored to the age and abilities of the child, whether they are beginners learning the basic elements of swimming or engaging in competitive swimming. In our training sessions, we foster fair play and camaraderie. Dive in with us today!
+                Plivanje pozitivno utiče na psihofizički i socijalni razvoj djeteta. Naš cilj je da
+                metodičkim vježbama u vodi doprinesemo pravilnom rastu i razvoju djeteta. Naši
+                programi prilagođeni su uzrastu i mogućnostima djeteta, bilo da je riječ o
+                početnicima i savladavanju osnovnih elemenata plivanja ili o takmičarskom
+                plivanju. Na našim treninzima njegujemo fair play i drugarstvo.
+                Zaplivajte s nama još danas!
             </div>
 
         </div>
@@ -170,10 +184,10 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 data-bosnian="Galerija" data-english="Gallery">Gallery</h1>
-                    <h2 data-bosnian="Fotografije naših članova u akciji."
-                        data-english="Photos of our club members in action.">
-                        Photos of our club members in action.</h2>
+                    <h1 data-bosnian="Galerija" data-english="Gallery">GALERIJA</h1>
+                    <h2 data-bosnian="Fotografije naših članova u akciji"
+                        data-english="Photos of our club members in action">
+                        Fotografije naših članova u akciji</h2>
                 </div>
             </div>
             <div class="row">
@@ -184,6 +198,11 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
 
                         </div>
                         <div class="gallery-controls col-md-12">
+                            <button class="gallery-control" id="gallery-prev"><i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-control" id="gallery-next"><i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
 
                         <div class="gallery-thumbnails col-md-12">
                             <img src="img/IMG_20230916_094152-min.jpg" alt="Thumbnail 1"
@@ -213,31 +232,30 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 data-bosnian="Naše grupe" data-english="Our classes">Our classes</h1>
+                    <h1 data-bosnian="Naše grupe" data-english="Our classes">NAŠE GRUPE</h1>
                     <h2 data-bosnian="Pogledajte naše grupe i raspored treninga." data-english="Check out our classes
                         and training schedule.">
-                        Check out our classes and training schedule.</h2>
+                        Pogledajte naše grupe i raspored treninga.</h2>
                 </div>
                 <div class="col-md-4">
                     <div class="class-card">
                         <div class="class-card-front">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIlPFI_kswTD8rbWRu1xKqM887RqJsDTRiJQ&usqp=CAU"
                                 alt="Class Card Image">
-                            <h3 data-bosnian="POČETNICI" data-english="BEGINNERS">BEGINNERS</h3>
+                            <h3 data-bosnian="POČETNICI" data-english="BEGINNERS"> POČETNICI</h3>
                         </div>
                         <div class="class-card-back">
                             <p data-bosnian='Upisati se mogu neplivači svih uzrasta. U ovim grupama se radi na
                             oslobađanju od straha od vode i uče osnove plivanja i plutanja.
-                            Termini: ponedjeljak i srijeda: 20:30 – 21:30 i subota: 11:00 – 12:00.'
-                             data-english='Enrollment is open to non-swimmers of all ages. In these groups, the focus is on overcoming the fear of water and learning the basics of swimming and floating.
+                            Termini: ponedjeljak i srijeda: 20:30 – 21:30 i subota: 11:00 – 12:00.' data-english='Enrollment is open to non-swimmers of all ages. In these groups, the focus is on overcoming the fear of water and learning the basics of swimming and floating.
 
                              Schedule: Monday and Wednesday: 8:30 PM – 9:30 PM, and Saturday: 11:00 AM – 12:00 PM.
-                            '>Enrollment is open to non-swimmers of all ages. In these groups, the focus is on overcoming the fear of water and learning the basics of swimming and floating.
-
-                             Schedule: Monday and Wednesday: 8:30 PM – 9:30 PM, and Saturday: 11:00 AM – 12:00 PM.
+                            '>Upisati se mogu neplivači svih uzrasta. U ovim grupama se radi na
+                                oslobađanju od straha od vode i uče osnove plivanja i plutanja.
+                                Termini: ponedjeljak i srijeda: 20:30 – 21:30 i subota: 11:00 – 12:00.
                             </p>
                             <span class="price-tag" data-bosnian="Mjesečna članarina: 70 KM"
-                                data-english="Monthly Membership Fee: 70 KM">Monthly Membership Fee: 70 KM</span>
+                                data-english="Monthly Membership Fee: 70 KM"> MJESČNA ČLANARINA: 70 KM</span>
                         </div>
                     </div>
                 </div>
@@ -246,18 +264,20 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
                         <div class="class-card-front">
                             <img src="https://calphin.com/wp-content/uploads/2021/10/IMG_1935.jpg"
                                 alt="Class Card Image">
-                            <h3 data-bosnian="PLIVAČI" data-english="SWIMMERS">SWIMMERS</h3>
+                            <h3 data-bosnian="PLIVAČI" data-english="SWIMMERS"> PLIVAČI</h3>
                         </div>
                         <div class="class-card-back">
                             <p data-bosnian='U ovoj grupi djeca uče da pravilno plivaju četiri stila plivanja, okret,
                             ronjenje i skakanje. Radimo na pripremi za takmičenja.
                             Termini: ponedjeljak i srijeda: 20:30 – 21:30 i subota: 11:00 – 12:00.' data-english='In this group, children learn to swim all four swimming styles, practice turns, diving, and jumping. We focus on preparing them for competitions.
 
-                            Schedule: Monday and Wednesday: 8:30 PM – 9:30 PM, and Saturday: 11:00 AM – 12:00 PM.'>In this group, children learn to swim all four swimming styles, practice turns, diving, and jumping. We focus on preparing them for competitions.
-
-                            Schedule: Monday and Wednesday: 8:30 PM – 9:30 PM, and Saturday: 11:00 AM – 12:00 PM.</p>
+                            Schedule: Monday and Wednesday: 8:30 PM – 9:30 PM, and Saturday: 11:00 AM – 12:00 PM.'>U
+                                ovoj grupi djeca uče da pravilno plivaju četiri stila plivanja, okret,
+                                ronjenje i skakanje. Radimo na pripremi za takmičenja.
+                                Termini: ponedjeljak i srijeda: 20:30 – 21:30 i subota: 11:00 – 12:00.
+                            </p>
                             <span class="price-tag" data-bosnian="Mjesečna članarina: 70 KM"
-                                data-english="Monthly Membership Fee: 70 KM">Monthly Membership Fee: 70 KM</span>
+                                data-english="Monthly Membership Fee: 70 KM"> MJESEČNA ČLANARINA: 70 KM</span>
                         </div>
                     </div>
                 </div>
@@ -266,19 +286,22 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
                         <div class="class-card-front">
                             <img src="https://www.chicagobluedolphins.com/wp-content/uploads/2017/06/swim-team-kids-chicago.jpg"
                                 alt="Class Card Image">
-                            <h3 data-bosnian="TAKMIČARI" data-english="COMPETITORS">COMPETITORS</h3>
+                            <h3 data-bosnian="TAKMIČARI" data-english="COMPETITORS"> TAKMIČARI</h3>
                         </div>
                         <div class="class-card-back">
                             <p data-bosnian='Djeca svih uzrasta koja tehnički pravilno plivaju sva četiri stila i imaju
                             želju I motivaciju za daljnjim napretkom i takmičenjem.
                             Termini: ponedjeljak, srijeda i petak: 20:30 – 21:30 ,
-                            subota: 10:00 – 13:00 i nedjelja: 11:00 – 14:00.' data-english='Children of all ages who swim all four styles correctly and have the desire and motivation for further improvement and competition are welcome.
+                            subota: 10:00 – 13:00 i nedjelja: 11:00 – 14:00.'
+                                data-english='Children of all ages who swim all four styles correctly and have the desire and motivation for further improvement and competition are welcome.
 
-                            Schedule: Monday, Wednesday, and Friday: 8:30 PM – 9:30 PM, Saturday: 10:00 AM – 1:00 PM, and Sunday: 11:00 AM – 2:00 PM.'>Children of all ages who swim all four styles correctly and have the desire and motivation for further improvement and competition are welcome.
-
-                            Schedule: Monday, Wednesday, and Friday: 8:30 PM – 9:30 PM, Saturday: 10:00 AM – 1:00 PM, and Sunday: 11:00 AM – 2:00 PM.</p>
+                            Schedule: Monday, Wednesday, and Friday: 8:30 PM – 9:30 PM, Saturday: 10:00 AM – 1:00 PM, and Sunday: 11:00 AM – 2:00 PM.'>Djeca svih
+                                uzrasta koja tehnički pravilno plivaju sva četiri stila i imaju
+                                želju I motivaciju za daljnjim napretkom i takmičenjem.
+                                Termini: ponedjeljak, srijeda i petak: 20:30 – 21:30 ,
+                                subota: 10:00 – 13:00 i nedjelja: 11:00 – 14:00.</p>
                             <span class="price-tag" data-bosnian="Mjesečna članarina: 90 KM"
-                                data-english="Monthly Membership Fee: 90 KM">Monthly Membership Fee: 90 KM</span>
+                                data-english="Monthly Membership Fee: 90 KM"> MJESEČNA ČLANARINA: 90 KM</span>
                         </div>
                     </div>
                 </div>
@@ -290,8 +313,8 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
     <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h3 data-bosnian="Zapratite nas" data-english="Follow Us">Follow Us</h3>
+                <div class="col-md-6">
+                    <h3 data-bosnian="Zapratite nas" data-english="Follow Us"> ZAPRATITE NAS</h3>
                     <ul>
                         <li><a href="https://www.facebook.com/profile.php?id=100092282153203&mibextid=ZbWKwL"><i
                                     class="fab fa-facebook"></i><br> Facebook</a></li>
@@ -299,8 +322,8 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
                                     class="fab fa-instagram"></i><br> Instagram</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h3 data-bosnian="Kontaktirajte nas" data-english="Contact Us">Contact Us</h3>
+                <div class="col-md-6">
+                    <h3 data-bosnian="Kontaktirajte nas" data-english="Contact Us"> KONTAKTIRATE NAS</h3>
                     <ul>
                         <li><i class="fa fa-phone"></i> +387 63 128 480 Mateo <br>
                             +387 61 063 400 Mak</li>
@@ -314,22 +337,7 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
 
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h3 data-bosnian="Navigacija" data-english="Quick Links">Quick Links</h3>
-                    <ul>
-                        <li>
-                            <a href="#home" data-bosnian="POČETNA" data-english="HOME">HOME</a>
-                        </li>
-                        <li>
-                            <a href="#about" data-bosnian="O NAMA" data-english="ABOUT US">ABOUT US</a>
-                        </li>
-                        <li>
-                            <a href="#gallery" data-bosnian="GALERIJA" data-english="GALLERY">GALLERY</a>
-                        </li>
-                        <li>
-                            <a href="#class-cards" data-bosnian=" GRUPE" data-english="CLASSES">CLASSES</a>
-                        </li>
-                </div>
+
                 <div class="col-md-12">
                     <p data-bosnian=" &copy; 2023 Swim. Sva prava zadržana."
                         data-english=" &copy; 2023 Swim. All rights reserved."> &copy; 2023 Swim. All rights reserved.
@@ -347,7 +355,7 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Custom JavaScript -->
-    <script src="./js/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
