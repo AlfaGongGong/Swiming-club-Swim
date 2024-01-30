@@ -82,21 +82,35 @@ nextButton.addEventListener("click", function () {
 // Display the first image initially
 displayImage(0);
 
-//on load show only hamburger and hide navbar
+//on load show onlyamburger and navbar on larger screens
 
-window.onload = function () {
+window.onload = () => {
   const hamburger = document.getElementById("toggle-navbar-btn");
   const navbar = document.getElementById("navbarNav");
-  navbar.classList.add("collapsed");
-  // Toggle between showing and hiding the navigation when user clicks on the hamburger/
+  navbar.style.display = "none"; // Hide the navbar on load
 
-  //when clicked on hamburger icon it will open/close the navigation bar
+  // Check the screen size and toggle the navigation accordingly
   hamburger.onclick = function () {
-    navbar.classList.toggle("expanded");
-    if (navbar.classList.contains("expanded")) {
+    if (navbar.style.display === "none") {
+      navbar.style.display = "flex"; // Show the navbar
       hamburger.innerHTML = '<i class="fas fa-times"></i>'; // Change to close icon
     } else {
-      hamburger.innerHTML = '<i class="fa fa-bars" aria-hidden="true"></i>'; // Change to hamburger icon
+      navbar.style.display = "none"; // Hide the navbar
+      hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // Change back to hamburger icon
     }
   };
 };
+
+// Add a resize event listener to handle screen size changes
+window.addEventListener("resize", function () {
+  const hamburger = document.getElementById("toggle-navbar-btn");
+  const navbar = document.getElementById("navbarNav");
+
+  if (window.innerWidth <= 767) {
+    navbar.style.display = "none"; // Hide the navbar on small screens
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // Change to hamburger icon
+  } else {
+    navbar.style.display = "flex"; // Show the navbar on large screens
+    hamburger.innerHTML = '<i class="fas fa-times"></i>'; // Change to close icon
+  }
+});
