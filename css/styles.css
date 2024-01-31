@@ -27,6 +27,10 @@ body {
 
 #navbarNav {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -48,27 +52,51 @@ body {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 768px) {
   #navbarNav {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
+    position: fixed;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    height: 4rem;
+    width: 100vw;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+#navbarNav--opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+@media (min-width: 1024px) {
+  #navbarNav--opened .nav_item {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: none;
+    transition: none;
     width: 100%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    padding: 0;
   }
 }
 #navbarNav ul {
@@ -235,6 +263,215 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100vh;
+  color: #483285;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+#home h1 {
+  display: none;
+  font-family: "Playfair Display", serif;
+  font-size: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  -webkit-animation: wawes 3s infinite alternate ease-in-out;
+          animation: wawes 3s infinite alternate ease-in-out;
+}
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 5rem;
+  }
+}
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  75% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+@keyframes wobble {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  75% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+@-webkit-keyframes wawes {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes wawes {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  -webkit-animation: wawes 3s infinite alternate ease-in-out;
+          animation: wawes 3s infinite alternate ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    display: none;
+    -webkit-animation: wawes 3s infinite alternate ease-in-out;
+            animation: wawes 3s infinite alternate ease-in-out;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    color: #483285;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+    background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+  p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #483285;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+    background-color: rgba(255, 255, 255, 0.6901960784);
+    padding: 1rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  p:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+.wobble-text {
+  -webkit-animation: wobble 3s infinite alternate ease-in-out;
+          animation: wobble 3s infinite alternate ease-in-out;
+}
+
+#intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -248,23 +485,11 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
 }
-#home h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 10rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
-  color: #483285;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
-}
-@media (max-width: 768px) {
-  #home h1 {
-    font-size: 5rem;
-  }
-}
-#home p {
+#intro p {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   text-align: center;
@@ -280,26 +505,13 @@ body {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#home p:hover {
+#intro p:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
 }
 @media (max-width: 320px) {
-  #home {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-  }
-  #home h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  #home p {
+  #intro p {
     font-size: 0.3rem;
     padding: 0;
     margin: 0;

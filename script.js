@@ -30,7 +30,6 @@ function toggleLanguage() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const deffaultLanguage = elent.setAttribute("data-bosnian");
   const languageButton = document.querySelector("#language-switcher-btn");
   languageButton.addEventListener("click", toggleLanguage);
 });
@@ -82,14 +81,11 @@ nextButton.addEventListener("click", function () {
 // Display the first image initially
 displayImage(0);
 
-//on load show onlyamburger and navbar on larger screens
-
 window.onload = () => {
   const hamburger = document.getElementById("toggle-navbar-btn");
   const navbar = document.getElementById("navbarNav");
   navbar.style.display = "none"; // Hide the navbar on load
 
-  // Check the screen size and toggle the navigation accordingly
   hamburger.onclick = function () {
     if (navbar.style.display === "none") {
       navbar.style.display = "flex"; // Show the navbar
@@ -101,16 +97,11 @@ window.onload = () => {
   };
 };
 
-// Add a resize event listener to handle screen size changes
-window.addEventListener("resize", function () {
-  const hamburger = document.getElementById("toggle-navbar-btn");
-  const navbar = document.getElementById("navbarNav");
+window.onload = () => {
+  const heroHeading = document.getElementById("hero-heading");
+  heroHeading.style.display = "none"; // Hide the hero heading on load
 
-  if (window.innerWidth <= 767) {
-    navbar.style.display = "none"; // Hide the navbar on small screens
-    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // Change to hamburger icon
-  } else {
-    navbar.style.display = "flex"; // Show the navbar on large screens
-    hamburger.innerHTML = '<i class="fas fa-times"></i>'; // Change to close icon
-  }
-});
+  setTimeout(() => {
+    heroHeading.style.display = "flex"; // Show the hero heading after 2s
+  }, 2000);
+};

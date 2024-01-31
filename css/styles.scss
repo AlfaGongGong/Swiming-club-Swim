@@ -34,6 +34,10 @@ body {
 
 #navbarNav {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
@@ -44,16 +48,39 @@ body {
   padding: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  flex-wrap: wrap;
+
 
   @media (max-width: 768px) {
-    position: static;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 4rem;
+    width: 100vw;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &--opened {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    box-shadow: none;
-    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+  }
+
+  @media (min-width: 1024px) {
+    &--opened .nav_item {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0%);
+      transition: none;
+      width: 100%;
+    }
   }
 
   ul {
@@ -121,6 +148,8 @@ body {
   }
 }
 
+
+
 #language-switcher-btn {
   display: flex;
   justify-content: center;
@@ -178,6 +207,167 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100vh;
+  color: $font-color;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+
+
+
+
+
+  h1 {
+    display: none;
+    font-family: $heading-font;
+    font-size: 10rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    color: $font-color;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+    animation: wawes 3s infinite alternate ease-in-out;
+
+
+    @media (max-width: 768px) {
+      font-size: 5rem;
+    }
+  }
+
+
+
+  @keyframes wobble {
+    0% {
+      transform: rotate(-2deg);
+    }
+
+    25% {
+      transform: rotate(2deg);
+    }
+
+    50% {
+      transform: rotate(-2deg);
+    }
+
+    75% {
+      transform: rotate(2deg);
+    }
+
+    100% {
+      transform: rotate(-2deg);
+    }
+  }
+
+  @keyframes wawes {
+    0% {
+      transform: translateY(0);
+    }
+
+    25% {
+      transform: translateY(-10px);
+    }
+
+    50% {
+      transform: translateY(0);
+    }
+
+    75% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+
+h1 {
+  font-family: $heading-font;
+  font-size: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: $font-color;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  animation: wawes 3s infinite alternate ease-in-out;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    display: none;
+    animation: wawes 3s infinite alternate ease-in-out;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    color: $font-color;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+    background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  p {
+    font-family: $content-font;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $font-color;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+    background-color: #ffffffb0;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+}
+
+.wobble-text {
+  animation: wobble 3s infinite alternate ease-in-out;
+}
+
+
+
+
+
+
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
@@ -189,21 +379,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  h1 {
-    font-family: $heading-font;
-    font-size: 10rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    color: $font-color;
-    font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
-
-    @media (max-width: 768px) {
-      font-size: 5rem;
-    }
-  }
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
 
   p {
     font-family: $content-font;
@@ -226,16 +404,6 @@ body {
   }
 
   @media (max-width: 320px) {
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
     p {
       font-size: 0.3rem;
       padding: 0;
@@ -244,6 +412,7 @@ body {
     }
   }
 }
+
 
 #about {
   display: flex;
