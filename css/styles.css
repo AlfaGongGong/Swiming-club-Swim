@@ -49,8 +49,7 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
-li {
+ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +63,18 @@ li {
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+ul a {
+  color: #483285;
+  text-decoration: none;
+  padding: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 .navbar-brand {
@@ -217,7 +228,7 @@ li {
   color: #483285;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
-  background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
+  background-image: url("https: //youtu.be/2sweBz9Ygl0?feature=shared");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -426,11 +437,6 @@ h1 {
   color: #483285;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
-  background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
 }
