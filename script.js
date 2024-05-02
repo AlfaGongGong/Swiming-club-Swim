@@ -82,22 +82,6 @@ nextButton.addEventListener("click", function () {
 displayImage(0);
 
 window.onload = () => {
-  const hamburger = document.getElementById("toggle-navbar-btn");
-  const navbar = document.getElementById("navbarNav");
-  navbar.style.display = "none"; // Hide the navbar on load
-
-  hamburger.onclick = function () {
-    if (navbar.style.display === "none") {
-      navbar.style.display = "flex"; // Show the navbar
-      hamburger.innerHTML = '<i class="fas fa-times"></i>'; // Change to close icon
-    } else {
-      navbar.style.display = "none"; // Hide the navbar
-      hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // Change back to hamburger icon
-    }
-  };
-};
-
-window.onload = () => {
   const heroHeading = document.getElementById("hero-heading");
   heroHeading.style.display = "none"; // Hide the hero heading on load
 

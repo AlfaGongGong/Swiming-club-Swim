@@ -26,23 +26,24 @@
 </head>
 
 <body>
-    <!-- Navbar Section -->
-    <button id="toggle-navbar-btn" class="navbar-toggler" type="button" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-    </button>
-    <nav id="navbarNav" class="navbar navbar-expand-md side-navbar  collapse"> <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
             <img src="./img/logo.jpg" alt="Club Logo" id="logo">
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-        <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"></ul>
             <li class="nav-item active">
                 <a class="nav-link" href="#home" data-bosnian="POČETNA" data-english="HOME"><i
                         class="fas fa-home"></i>POČETNA</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#about" data-bosnian="O NAMA" data-english="ABOUT US"><i
-                        class="fas fa-address-card"></i>O NAMA</a>
+                        class="fas fa-address-card"></i>INFO</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#gallery" data-bosnian="GALERIJA" data-english="GALLERY"><i
@@ -56,14 +57,13 @@
                 <a class="nav-link" href="#footer" data-bosnian="KONTAKT" data-english="CONTACT US"><i
                         class="fas fa-phone"> </i>KONTAKT</a>
             </li>
-        </ul>
-        <div class="language-switcher">
-            <button id="language-switcher-btn" onclick="toggleLanguage()" data-bosnian="Eng"
-                data-english="Bos">Eng</button>
 
+            <div class="language-switcher">
+                <button id="language-switcher-btn" onclick="toggleLanguage()" data-bosnian="Eng"
+                    data-english="Bos">Eng</button>
+            </div>
         </div>
     </nav>
-    <!-- End of Navbar Section -->
 
     <!-- Home Section Hero -->
     <section id="home" class=" hero wobblw-text">
