@@ -123,6 +123,27 @@ ul {
   margin-right: 1rem;
 }
 
+.navbar-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffffb0;
+  color: $font-color;
+  font-size: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
 
 #language-switcher-btn {
   display: flex;
