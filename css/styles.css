@@ -250,7 +250,7 @@ ul a {
           animation: wawes 3s infinite alternate ease-in-out;
 }
 
-}
+
 @-webkit-keyframes wobble {
   0% {
     -webkit-transform: rotate(-2deg);
