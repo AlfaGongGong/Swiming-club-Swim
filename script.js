@@ -10,30 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function toggleLanguage() {
-  const elements = document.querySelectorAll("[data-bosnian], [data-english]");
-
-  elements.forEach((element) => {
-    const bosnianText = element.getAttribute("data-bosnian");
-    const englishText = element.getAttribute("data-english");
-    const currentText = element.innerText;
-    if (currentText !== bosnianText && currentText !== englishText) {
-      element.setAttribute("data-english", currentText);
-    }
-    if (element.classList.contains("english")) {
-      element.innerText = bosnianText;
-    } else {
-      element.innerText = englishText;
-    }
-    element.classList.toggle("english");
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const languageButton = document.querySelector("#language-switcher-btn");
-  languageButton.addEventListener("click", toggleLanguage);
-});
-
 // Get all thumbnails
 var thumbnails = document.querySelectorAll(".gallery-thumbnails img");
 

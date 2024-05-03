@@ -45,33 +45,38 @@ body {
 ul {
   display: flex;
   flex-direction: column;
-  list-style: none;
-
-
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    list-style: none;
-  }
-
-  li:hover {
-    transform: scale(1.1);
-  }
-
-  a {
-    color: $font-color;
-    text-decoration: none;
-    padding: 1rem;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-  }
-
-
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
 }
+
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+a {
+  color: $font-color;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+
+
 
 .navbar-brand {
   display: flex;
@@ -136,12 +141,11 @@ ul {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
   transition: all 0.3s ease-in-out;
-  position: fixed;
+  position: sticky;
   width: 3rem;
   height: 3rem;
-  z-index: 1000;
   top: 0;
-  left: 0;
+  right: 0;
 
   &:hover {
     transform: scale(1.1);
@@ -179,92 +183,92 @@ ul {
   }
 }
 
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: $font-color;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
 
+  #frame-reklama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: $font-color;
+    margin-bottom: 2rem;
+
+  }
+
+}
 
 #home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   width: 100%;
   height: 100vh;
   color: $font-color;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
   background-image: url("https: //youtu.be/2sweBz9Ygl0?feature=shared");
+}
 
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
-
-
-
-
-
-  h1 {
-    display: none;
-    font-family: $heading-font;
-    font-size: 10rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    color: $font-color;
-    font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
-    animation: wawes 3s infinite alternate ease-in-out;
+@keyframes wobble {
+  0% {
+    transform: rotate(-2deg);
   }
 
-
-
-  @keyframes wobble {
-    0% {
-      transform: rotate(-2deg);
-    }
-
-    25% {
-      transform: rotate(2deg);
-    }
-
-    50% {
-      transform: rotate(-2deg);
-    }
-
-    75% {
-      transform: rotate(2deg);
-    }
-
-    100% {
-      transform: rotate(-2deg);
-    }
+  25% {
+    transform: rotate(2deg);
   }
 
-  @keyframes wawes {
-    0% {
-      transform: translateY(0);
-    }
+  50% {
+    transform: rotate(-2deg);
+  }
 
-    25% {
-      transform: translateY(-10px);
-    }
+  75% {
+    transform: rotate(2deg);
+  }
 
-    50% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
 
-    75% {
-      transform: translateY(10px);
-    }
+@keyframes wawes {
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-      transform: translateY(0);
-    }
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
 
-h1 {
+
+#intro-heading {
   font-family: $heading-font;
-  font-size: 10rem;
+  font-size: 7rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
@@ -290,17 +294,8 @@ h1 {
 
 #intro {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  height: 100vh;
   color: $font-color;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
 
   p {
     font-family: $content-font;

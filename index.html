@@ -26,12 +26,14 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="#">
             <img src="./img/logo.jpg" alt="Club Logo" id="logo">
         </a>
-        <button class="navbar-toggler" id="haburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" id="hamburger" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -47,7 +49,8 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#gallery" data-bosnian="GALERIJA" data-english="GALLERY"><i
-                        class="fas fa-image"> </i>GALERIJA</a>
+                        class="fas fa-image">
+                    </i>GALERIJA</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#class-cards" data-bosnian="GRUPE" data-english="CLASSES"><i
@@ -55,7 +58,8 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#footer" data-bosnian="KONTAKT" data-english="CONTACT US"><i
-                        class="fas fa-phone"> </i>KONTAKT</a>
+                        class="fas fa-phone">
+                    </i>KONTAKT</a>
             </li>
 
             <div class="language-switcher">
@@ -64,12 +68,29 @@
             </div>
         </div>
     </nav>
+    <!-- End of Navigation Bar -->
 
-    <!-- Home Section Hero -->
-    <section id="home" class=" hero wobble-text">
+    <section id="hero">
         <div class="container">
             <div class="row">
-                
+                <div class="col-md-12">
+                    <iframe id="frame-reklama"
+                        src="https://www.youtube.com/embed/2sweBz9Ygl0?si=D1cDxOGWwV886uo3&autoplay=1&loop=1&playlist=2sweBz9Ygl0"
+                        frameborder="0" title="SWIM"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  Home Section  -->
+    <section id="home">
+        <div class="container">
+            <div class="row">
+
                 <div class="col-md-12 intro" id="intro">
                     <p data-bosnian="Dobrodošli u SWIM , klub u kojem se plivanje voli i na treninge dolazi sa osmijehom! Školu plivanja i takmičarske treninge vode licencirani treneri sa
                                     uspješnim plivačkim karijerama. I prije prvog rođendana kluba, “Swim” već ima
@@ -87,7 +108,7 @@
 
                 </div>
                 <div class="col-md-12">
-                    <h1 id="hero-heading" data-bosnian="BUDI PLIVAČ!" data-english="BE THE SWIMER!">
+                    <h1 id="intro-heading" data-bosnian="BUDI PLIVAČ!" data-english="BE THE SWIMER!">
                         BUDI PLIVAČ!</h1>
 
                 </div>
@@ -95,18 +116,18 @@
             </div>
         </div>
     </section>
-    <!-- End of Home Section Hero -->
+    <!-- End of Home Section  -->
 
-    
+
 
 
     <!-- About Us Section -->
     <section id=" about">
         <div class="container">
 
-        <h1 data-bosnian="O NAMA" data-english="ABOUT US"> O NAMA</h1>
-        <h2 data-bosnian="Upoznajte naše certificirane instruktore plivanja"
-            data-english="Meet our certified swimming instructors"> INSTRUKTORI PLIVANJA</h2>
+            <h1 data-bosnian="O NAMA" data-english="ABOUT US"> O NAMA</h1>
+            <h2 data-bosnian="Upoznajte naše certificirane instruktore plivanja"
+                data-english="Meet our certified swimming instructors"> INSTRUKTORI PLIVANJA</h2>
             <div class="row">
                 <div class="col-md-6 card-container">
                     <div class="card mb-3 profile-card" onclick="toggleBio(this)">
@@ -114,7 +135,8 @@
                         <div class="card-body">
                             <h3 class="card-title" data-bosnian="Mateo" data-english="Mateo">Mateo</h3>
                             <span class="bio-trigger" data-bosnian="Kliknite za biografiju"
-                                data-english="Click for bio"> KLIKNITE ZA BIOGRAFIJU</span>
+                                data-english="Click for bio">
+                                KLIKNITE ZA BIOGRAFIJU</span>
                             <p class="card-text"
                                 data-bosnian="Mateo Todosijević rođen je u Sarajevu 25.02.1999. Završio je Petu gimnaziju, sportski smijer. Treću godinu srednje škole pohađa u Amrici, srednja škola Dunellen High school gdje nastavlja da se aktivno bavi plivanjem i postiže značajne rezultate. Fakultetsku diplomu stiče 2022. god i dobiva dzvanje Kineziologa.
 Kao trener plivanja počinje se baviti 2017. god, a svoj klub Swim osniva 2023. god.
@@ -144,7 +166,8 @@ Od 2023. god postaje licencirani trener od strane FINA krovne plivačke organiza
                         <div class="card-body">
                             <h3 class="card-title">Mak</h3>
                             <span class="bio-trigger" data-bosnian="Kliknite za biografiju"
-                                data-english="Click for bio"> KLIKNITE ZA BIOGRAFIJU</span>
+                                data-english="Click for bio">
+                                KLIKNITE ZA BIOGRAFIJU</span>
                             <p class="card-text"
                                 data-bosnian="Mak Oručević je bivši uspješan plivač, danas trener u čijem fokusu je razvoj plivačkih vještina kod najmlađih članova našeg kluba.
 
