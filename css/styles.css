@@ -216,6 +216,28 @@ a {
   cursor: pointer;
 }
 
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #483285;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+}
+
 #hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,26 +452,6 @@ a {
   height: auto;
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
-}
-#about h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
-  color: #483285;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
-}
-#about h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.2rem;
-  text-align: center;
-  color: #483285;
-  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
 }
 #about p {
   font-family: "Lato", sans-serif;
