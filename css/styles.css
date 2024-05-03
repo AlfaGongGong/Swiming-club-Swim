@@ -249,10 +249,7 @@ ul a {
   -webkit-animation: wawes 3s infinite alternate ease-in-out;
           animation: wawes 3s infinite alternate ease-in-out;
 }
-@media (max-width: 768px) {
-  #home h1 {
-    font-size: 5rem;
-  }
+
 }
 @-webkit-keyframes wobble {
   0% {
