@@ -45,6 +45,7 @@ body {
 ul {
   display: flex;
   flex-direction: column;
+style: none;
 
 
   li {
@@ -209,11 +210,6 @@ ul {
     font-weight: 900;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
     animation: wawes 3s infinite alternate ease-in-out;
-
-
-    @media (max-width: 768px) {
-      font-size: 5rem;
-    }
   }
 
 
@@ -278,53 +274,7 @@ h1 {
 
 
 
-@media screen and (max-width: 768px) {
 
-  h1 {
-    display: none;
-    animation: wawes 3s infinite alternate ease-in-out;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-    height: 100vh;
-    color: $font-color;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #ccc;
-    background-image: url("https://mjswimacademy.com/wp-content/uploads/2023/04/glasgow-hero.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #ccc;
-  }
-
-  p {
-    font-family: $content-font;
-    font-size: 1.5rem;
-    text-align: center;
-    color: $font-color;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
-    background-color: #ffffffb0;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-    }
-  }
-}
 
 .wobble-text {
   animation: wobble 3s infinite alternate ease-in-out;
@@ -370,14 +320,7 @@ h1 {
     }
   }
 
-  @media (max-width: 320px) {
-    p {
-      font-size: 0.3rem;
-      padding: 0;
-      margin: 0;
-
-    }
-  }
+  
 }
 
 
