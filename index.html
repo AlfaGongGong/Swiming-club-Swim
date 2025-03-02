@@ -68,18 +68,32 @@
             </div>
         </div>
     </nav>
-    <!-- End of Navigation Bar -->
+    <!-- End of Navigation Bar
+     <iframe id="frame-reklama"
+                        src="https://www.youtube.com/embed/2sweBz9Ygl0?si=D1cDxOGWwV886uo3&autoplay=1&loop=1&playlist=2sweBz9Ygl0"
+                        frameborder="0" title="SWIM"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+
+                    </iframe> -->
 
     <section id="hero">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <iframe id="frame-reklama"
-                        src="https://www.youtube.com/embed/2sweBz9Ygl0?si=D1cDxOGWwV886uo3&autoplay=1&loop=1&playlist=2sweBz9Ygl0"
-                        frameborder="0" title="SWIM"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    <style>
+                        lite-youtube {
+                            /* No Shadow */
+                            --lite-youtube-frame-shadow-visible: no;
+                        }
+                    </style>
+                    <lite-youtube videoid="2sweBz9Ygl0" autoplay="1"
+                        params="controls=0&showinfo=0&rel=0&autopause=1&autoload=1&modestbranding=1&loop=1&enablejsapi=1&playlist=2sweBz9Ygl0">
+                        <img alt="Youtube Video" src="https://img.youtube.com/vi/2sweBz9Ygl0/hqdefault.jpg"
+                            class="lite-youtube-img"
+                            style="cursor: pointer; width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; padding: 0; border: 0;" />
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=2sweBz9Ygl0"></a>
+                    </lite-youtube>
 
-                    </iframe>
                 </div>
             </div>
         </div>
@@ -393,6 +407,9 @@ How to help little ones enjoy the water? How to teach them to swim? Through play
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Light youtube embed script -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="./script.js"></script>
